@@ -1,0 +1,8 @@
+def find_largest(my_array):
+    largest=my_array[0]
+    for i in range(1,len(my_array)):
+        if(my_array[i]>largest):
+            largest=my_array[i]
+    return largest
+
+find_largest([5,1,3,10,7])
