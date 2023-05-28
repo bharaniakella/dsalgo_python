@@ -1,0 +1,14 @@
+import numpy as np
+
+arr=np.array([12,3,4,13,7,5])
+
+def selection_sort(arr):
+    
+    for i in range(len(arr)-1):
+        mini=i
+        for j in range(i,len(arr)):
+            if(arr[j]<arr[mini]):
+                temp=arr[mini]
+                arr[mini]=arr[j]
+                arr[j]=temp
+    return arr
