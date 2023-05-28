@@ -1,0 +1,20 @@
+arr=np.array([1,2,1,2])
+
+def sort_012(arr):
+    count_zero,count_one,count_two=0,0,0
+    for i in range(len(arr)):
+        if(arr[i]==0):
+            count_zero=count_zero+1
+        elif(arr[i]==1):
+            count_one=count_one+1
+        elif(arr[i]==2):
+            count_two=count_two+1
+    
+    for i in range(count_zero):
+        arr[i]=0
+    for i in range(count_zero,count_zero+count_one):
+        arr[i]=1
+    for i in range(count_zero+count_one,len(arr)):
+        arr[i]=2
+    
+    return arr
