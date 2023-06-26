@@ -1,0 +1,9 @@
+def bin_search_rec(arr,low,high,target):
+    if(low>high):
+        return -1
+    mid=(low+high)//2
+    if(arr[mid]==target):
+        return mid
+    elif(target>arr[mid]):
+        return bin_search_rec(arr,mid+1,high,target)
+    return bin_search_rec(arr,low,mid-1,target)
